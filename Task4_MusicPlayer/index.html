@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="music-player">
+
+        <h1>🎵 Music Player</h1>
+
+        <div class="album">
+            <div class="music-icon">🎶</div>
+        </div>
+
+        <h2 id="song-title">Dreams</h2>
+        <p id="artist">Ayesha</p>
+
+        <!-- Audio -->
+        <audio id="audio">
+            <source src="song1.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Progress -->
+        <input type="range" id="progress" value="0">
+
+        <div class="time">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button onclick="previousSong()">⏮</button>
+            <button onclick="playPause()" id="play-btn">▶</button>
+            <button onclick="nextSong()">⏭</button>
+        </div>
+
+        <!-- Volume -->
+        <div class="volume">
+            🔊
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist">
+            <button onclick="selectSong(0)">🎵 Dreams</button>
+            <button onclick="selectSong(1)">🎵 Memories</button>
+            <button onclick="selectSong(2)">🎵 Journey</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
